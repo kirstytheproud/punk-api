@@ -4,20 +4,31 @@ import CardContainer from './components/CardContainer/CardContainer';
 import SearchBox from './components/SearchBox/SearchBox';
 import NavBar from './components/NavBar/NavBar';
 
+import beers from './assets/data/beers';
+
 function App() {
+  
+  console.log(beers);
+
+
+
+
+
   return (
+    <>
     <div className="App">
-      <header className="App-header">
         <p>
           Punk API Project
         </p>
-      </header>
-
   
-      <SearchBox />
-      <CardContainer />
-      <NavBar />
+  <div className='beer-cards'>
+    <CardContainer />
+
+  </div>
+     
     </div>
+  
+  </>
   );
 }
 
