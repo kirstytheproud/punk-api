@@ -1,34 +1,31 @@
-import './App.scss';
+import "./App.scss";
 
-import CardContainer from './components/CardContainer/CardContainer';
-import SearchBox from './components/SearchBox/SearchBox';
-import NavBar from './components/NavBar/NavBar';
-
-import beers from './assets/data/beers';
+import CardContainer from "./components/CardContainer/CardContainer";
+import SearchBox from "./components/SearchBox/SearchBox";
+import NavBar from "./components/NavBar/NavBar";
+import { useState } from "react";
 
 function App() {
-  
-  console.log(beers);
 
+  const [searchTerm, setSearchTerm] = useState("");
 
-
+  const handleInput = event => {
+    const cleanInput = event.target.value.toLowerCase();
+    setSearchTerm(cleanInput);
+  };
 
 
   return (
     <>
-    <div className="App">
-        <p>
-          Punk API Project
-        </p>
-  
-  <div className='beer-cards'>
-    <CardContainer />
+      <div className="App">
+        <h1>Punk API Project</h1>
 
-  </div>
-     
-    </div>
-  
-  </>
+        <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
+        <div className="beer-cards">
+          <CardContainer />
+        </div>
+      </div>
+    </>
   );
 }
 

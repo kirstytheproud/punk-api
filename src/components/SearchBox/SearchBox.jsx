@@ -1,9 +1,13 @@
 import React from 'react'
 import "./SearchBox.scss"
 
-const SearchBox = () => {
+const SearchBox = props => {
+  const {searchTerm, handleInput} = props;
+
   return (
-    <div>SearchBox</div>
+    <div className='searchbox'>
+      <input type="text" value={searchTerm} onInput={handleInput} placeholder='Search beers here' />
+    </div>
   )
 }
 

@@ -13,31 +13,29 @@ const BeerCard = (props) => {
     setShowDescription(!showDescription);
   };
 
-  //   const buttonJSX = (
-  //     <div className="beer-card__content beer-card__content--button">
-  //       <h3 className="beer-card__heading">{title}</h3>
-  //       <div onClick={handleClick}>
-  //         <Button buttonText={"More Info"} />
-  //       </div>
-  //     </div>
-  //   );
-
   return (
     <>
       {showDescription ? (
         <div className="beer-card__content">
-          
-          <div className="beer-card__content beer-card__content--text">
-          <img src={cross} className="beer-card__content--cross" alt={title} onClick={handleClick} />
+          <div className="beer-card__content--text">
+            <img
+              src={cross}
+              className="beer-card__content--cross"
+              alt={title}
+              onClick={handleClick}
+            />
             <p>{description}</p>
-            
           </div>
         </div>
       ) : (
         <div className="beer-card__content">
           <h2> {title} </h2>
-          <img src={imgSrc} className="beer-card__content--image" alt={props.title}  />
-          <p>{text}</p>
+          <img
+            src={imgSrc}
+            className="beer-card__content--image"
+            alt={props.title}
+          />
+          <p className="beer-card__content--tagline">{text}</p>
           <div className="beer-card__button" onClick={handleClick}>
             <Button buttonText={"More Info"} />
           </div>
@@ -48,4 +46,3 @@ const BeerCard = (props) => {
 };
 
 export default BeerCard;
-
