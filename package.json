@@ -2,7 +2,7 @@
   "name": "punk-api",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://kirstytheproud.github.io/punk-api",
+  "homepage": "https://kirstytheproud.github.io/punk-api",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "sass": "^1.49.9"
   }
 }
