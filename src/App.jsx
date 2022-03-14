@@ -24,7 +24,9 @@ function App() {
         <div className="beer-cards">
           <CardContainer />
         </div>
+      <NavBar />
       </div>
+
     </>
   );
 }
