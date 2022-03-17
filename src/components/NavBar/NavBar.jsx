@@ -1,9 +1,13 @@
 import React from 'react'
 import "./NavBar.scss"
+import FilterItem from '../FilterItem/FilterItem'
 
 const NavBar = () => {
+
   return (
-    <div>NavBar</div>
+    <div className='nav-bar'>Filters:
+ 
+    </div>
   )
 }
 

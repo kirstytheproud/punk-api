@@ -5,9 +5,10 @@ const SearchBox = props => {
   const {searchTerm, handleInput} = props;
 
   return (
-    <div className='searchbox'>
-      <input type="text" value={searchTerm} onInput={handleInput} placeholder='Search beers here' />
-    </div>
+    <form className='search-box'>
+      <input type="text" value={searchTerm} onInput={handleInput} placeholder='Search beers here'
+      className='search-box__input' />
+    </form>
   )
 }
 

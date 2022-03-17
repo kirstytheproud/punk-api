@@ -1,28 +1,24 @@
-import React from 'react'
-import "./CardContainer.scss"
-import BeerCard from '../BeerCard/BeerCard'
-import beers from '../../assets/data/beers';
+import React from "react";
+import "./CardContainer.scss";
+import BeerCard from "../BeerCard/BeerCard";
 
-const CardContainer = () => {
-
-    const allBeerCards = beers.map((beer) =>  {
+const CardContainer = ({ cards }) => {
+  return (
+    <div className="card-container">
+      {cards.map((beer) => {
         return (
           <BeerCard
             title={beer.name}
             imgSrc={beer.image_url}
             text={beer.tagline}
             description={beer.description}
+            key={beer.id}
           />
         );
-      });
-  return (
-      <>
-    <div className='card-container'>
-        {allBeerCards}
+      })}
     </div>
+  );
+};
 
-    </>
-  )
-}
 
 export default CardContainer;

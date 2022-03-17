@@ -5,11 +5,10 @@ import { useState } from "react";
 import cross from "../../assets/images/vector-cross-icon.png";
 
 const BeerCard = (props) => {
-  const { title, imgSrc, text, description } = props;
+  const { title, imgSrc, text, description, key } = props;
   const [showDescription, setShowDescription] = useState(false);
 
   const handleClick = () => {
-    console.log("button clicked");
     setShowDescription(!showDescription);
   };
 
@@ -29,7 +28,7 @@ const BeerCard = (props) => {
         </div>
       ) : (
         <div className="beer-card__content">
-          <h2> {title} </h2>
+          <h2> {key} {title} </h2>
           <img
             src={imgSrc}
             className="beer-card__content--image"

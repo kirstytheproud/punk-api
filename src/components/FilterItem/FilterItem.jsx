@@ -1,9 +1,15 @@
 import React from 'react'
 import "./FilterItem.scss"
 
-const FilterItem = () => {
+const FilterItem = ({filterName, handleCheckBox}) => {
+
+ 
+  
   return (
-    <div>FilterItem</div>
+    
+    <div className='filter-checkbox'>{filterName}
+    <input type="checkbox" name={filterName} onChange={handleCheckBox} />
+    </div>
   )
 }
 
