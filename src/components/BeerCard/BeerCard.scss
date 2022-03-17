@@ -1,45 +1,74 @@
+@font-face {
+  font-family: "Cabin Bold";
+  src: local("Cabin Bold"), url("../../assets/fonts/Cabin/Cabin-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: local("Source Sans Pro"),
+    url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+
 .beer-card__content {
   position: relative;
-  border: 1px solid black;
-  border-radius: 20px;
+  background-color: rgba(241, 241, 241, 0.8);
+  border-radius: 10px;
   width: 250px;
   height: 400px;
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 11px 10px 14px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 11px 10px 14px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 10px 14px -13px rgba(0, 0, 0, 0.75);
 
   h2 {
+    font-family: "Cabin Bold";
     font-size: 18px;
   }
 
   &--image {
-    width: 80px;
-    height: 250px;
+    width: 70px;
+    height: 240px;
   }
 
   &--cross {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     top: 10px;
     right: 10px;
-    background-color: white;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: rgb(0, 162, 255);
+    }
   }
 
   &--text {
-    width: 220px;
-    height: 400px;
+    width: 250px;
+    height: 410px;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 20px;
+    padding-top: 20px;
     top: 0;
+    left: 0;
     overflow-y: auto;
-    background: rgba(14, 1, 37, 0.8);
+    background: rgba(31, 62, 128, 0.8);
     white-space: pre-line;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Source Sans Pro";
   }
 
-  &--tagline{
-      font-size: 14px;
+  &--tagline {
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+  }
+
+  &:hover {
+    -webkit-box-shadow: 12px 10px 53px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 12px 10px 53px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 12px 10px 53px -14px rgba(0, 0, 0, 0.75);
   }
 }

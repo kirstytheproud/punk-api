@@ -1,12 +1,47 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: local("Source Sans Pro"),
+    url("/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+
 .app {
   text-align: center;
 
+  margin: 0;
+  padding: 0;
+  background-color: rgba(51, 163, 255, 0.5);
 }
+
+// .app__logo{
+//   img{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 10px;
+//   width: 200px;
+//   height: 200px;
+//   }
+// }
 
 .app__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  margin: 20px;
 }
 
+.app__search-box {
+  position: relative;
+
+  &--logo {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -3,4 +3,11 @@ button {
     color: white;
     padding: 5px 10px;
     border-radius: 50px;
+    border: none;
+    padding: 5px 20px;
+box-shadow: 11px 10px 14px -13px rgba(0,0,0,0.75);
+
+&:hover{
+    background-color: rgb(73,98,150) ;
+}
 }

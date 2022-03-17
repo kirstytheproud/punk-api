@@ -2,7 +2,7 @@ import React from "react";
 import "./BeerCard.scss";
 import Button from "../Button/Button";
 import { useState } from "react";
-import cross from "../../assets/images/vector-cross-icon.png";
+import cross from "../../assets/images/cross.png";
 
 const BeerCard = (props) => {
   const { title, imgSrc, text, description, key } = props;

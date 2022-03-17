@@ -3,6 +3,8 @@ import CardContainer from "./components/CardContainer/CardContainer";
 import SearchBox from "./components/SearchBox/SearchBox";
 import { useState, useEffect } from "react";
 import FilterItem from "./components/FilterItem/FilterItem";
+import logo from "../src/assets/images/brew-dog.png"
+import search from "../src/assets/images/search.png"
 
 const App = () => {
   const [beers, setBeers] = useState([]);
@@ -73,7 +75,12 @@ const App = () => {
   return (
     <>
       <div className="app">
-        <h1>Punk API Project</h1>
+        
+        <div className="app__logo">
+        <img className="app__logo" src={logo} alt="brewdog logo" />
+        </div>
+
+
         <div className="app__nav">
           Filters:
           <FilterItem
@@ -88,7 +95,11 @@ const App = () => {
             filterName={"Acidic (ph < 4)"}
             handleCheckBox={filterAcidic}
           />
+
+          <div className="app__search-box">
           <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
+          <img className="app__search-box--logo" src={search} alt="search icon" />
+          </div>
         </div>
         <div className="app__main">
           <div className="beer-cards">
