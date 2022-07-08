@@ -11,6 +11,7 @@ const CardContainer = ({ cards }) => {
             imgSrc={beer.image_url}
             text={beer.tagline}
             description={beer.description}
+            foodPairings={beer.food_pairing.map((food) => { return (food.split(", "))})}
             key={beer.id}
           />
         );

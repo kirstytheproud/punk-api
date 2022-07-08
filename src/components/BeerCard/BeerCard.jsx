@@ -5,7 +5,7 @@ import { useState } from "react";
 import cross from "../../assets/images/cross.png";
 
 const BeerCard = (props) => {
-  const { title, imgSrc, text, description, key } = props;
+  const { title, imgSrc, text, description, foodPairings } = props;
   const [showDescription, setShowDescription] = useState(false);
 
   const handleClick = () => {
@@ -15,7 +15,7 @@ const BeerCard = (props) => {
   return (
     <>
       {showDescription ? (
-        <div className="beer-card__content">
+        <div className="beer-card__content" key={props.id}>
           <div className="beer-card__content--text">
             <img
               src={cross}
@@ -24,11 +24,14 @@ const BeerCard = (props) => {
               onClick={handleClick}
             />
             <p>{description}</p>
+            <br></br>
+            <h4>Food Pairings</h4>
+            <p>{foodPairings}</p>
           </div>
         </div>
       ) : (
-        <div className="beer-card__content">
-          <h2> {key} {title} </h2>
+        <div className="beer-card__content" key={props.id}>
+          <h2> {title} </h2>
           <img
             src={imgSrc}
             className="beer-card__content--image"
