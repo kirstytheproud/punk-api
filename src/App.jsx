@@ -50,7 +50,7 @@ const App = () => {
         .then((data) => {
           setBeers(data);
         });
-    } else if (ABV === true) {
+    } else if (EBC === true) {
       fetch(beerApi + "?ebc_gt=20")
         .then((response) => response.json())
         .then((data) => {
