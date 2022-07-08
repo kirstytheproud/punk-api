@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/punk-api/static/css/main.b2393ab5.css",
-    "main.js": "/punk-api/static/js/main.1b99a10b.js",
+    "main.css": "/punk-api/static/css/main.b057b2ea.css",
+    "main.js": "/punk-api/static/js/main.77bb77bd.js",
     "static/js/787.ae7c3095.chunk.js": "/punk-api/static/js/787.ae7c3095.chunk.js",
     "static/media/SourceSansPro-Regular.ttf": "/punk-api/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
     "static/media/Cabin-Bold.ttf": "/punk-api/static/media/Cabin-Bold.a2cefc2fa71da2edcaec.ttf",
     "static/media/brew-dog.png": "/punk-api/static/media/brew-dog.4004f0665af09a6d7634.png",
     "static/media/cross.png": "/punk-api/static/media/cross.5d07d5fec43074868a45.png",
     "index.html": "/punk-api/index.html",
-    "main.b2393ab5.css.map": "/punk-api/static/css/main.b2393ab5.css.map",
-    "main.1b99a10b.js.map": "/punk-api/static/js/main.1b99a10b.js.map",
+    "main.b057b2ea.css.map": "/punk-api/static/css/main.b057b2ea.css.map",
+    "main.77bb77bd.js.map": "/punk-api/static/js/main.77bb77bd.js.map",
     "787.ae7c3095.chunk.js.map": "/punk-api/static/js/787.ae7c3095.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2393ab5.css",
-    "static/js/main.1b99a10b.js"
+    "static/css/main.b057b2ea.css",
+    "static/js/main.77bb77bd.js"
   ]
 }
