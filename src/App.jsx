@@ -15,7 +15,15 @@ const App = () => {
   const beerApi = "https://api.punkapi.com/v2/beers";
 
   const getBeers = (ABV, classic) => {
-    if (ABV === true) {
+    if (classic === true && ABV === true) {
+    fetch(beerApi + "?brewed_before=12-2010&abv_gt=6")
+      .then((response) => response.json())
+      .then((data) => {
+        setBeers(data);
+        console.log(data);
+      });
+    
+     }else if (ABV === true) {
       fetch(beerApi + "?abv_gt=6")
         .then((response) => response.json())
         .then((data) => {
@@ -27,13 +35,7 @@ const App = () => {
         .then((data) => {
           setBeers(data);
         });
-    } else if (classic === true && ABV === true) {
-      fetch(beerApi + "?brewed_before=12-2010&abv_gt=6")
-        .then((response) => response.json())
-        .then((data) => {
-          setBeers(data);
-          console.log(data);
-        });
+
     } else {
       fetch(beerApi)
         .then((response) => response.json())
@@ -91,10 +93,10 @@ const App = () => {
             filterName={"Classic Range"}
             handleCheckBox={filterClassicRange}
           />
-          <FilterItem
+          {/* <FilterItem
             filterName={"Acidic (ph < 4)"}
             handleCheckBox={filterAcidic}
-          />
+          /> */}
 
           <div className="app__search-box">
           <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
